@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar style="color: rgb(0, 0, 0);">
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="rectangle"></div>
+  <ion-card-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating" style="margin-left: 10px;  margin-bottom: -10px; color: white; font-size: 14px; font-family: Noto Sans;">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="margin-left: 10px; margin-bottom: -10px; color: white; font-size: 14px; font-family: Noto Sans;">Mot de passe</ion-label>
+      <ion-input #password required></ion-input>
+    </ion-item>
+    <ion-text
+    (click)="connexion(email, password)"
+     style="color: #1641A6; text-align: center; font-family: NSimSun; font-size: 14;">Connexion</ion-text>
+    <ion-text 
+    [routerLink]="['/new-compte']"
+     style="color: white; text-align: center; font: Noto Sans; font-size: 16;">Créer un compte</ion-text>
+</form>
+</ion-card-content>
+</ion-content>
+
+

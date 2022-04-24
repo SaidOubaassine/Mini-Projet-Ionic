@@ -1,0 +1,26 @@
+<ion-header >
+  <ion-toolbar style="color: white; ">
+    <ion-title>Formations</ion-title>
+    <ion-icon (click)="authService.SignOut()" style="margin-left: 90%;position: absolute; margin-top: -25px;" name="log-out-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+<ion-infinite-scroll-content style="display: flex; justify-content: center; align-items: center;">
+<ion-list style="display: inline-block;">
+  <ion-item style="margin-bottom: 20px;" *ngFor="let item of data">
+    <ion-card-content style=" width: 250px; height: 200px;    background: linear-gradient(#2F05A2, #4FFBB7); border-radius: 10px;  ">
+      <ion-text style=" margin-left: 25%; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">{{item.nom}}</ion-text><br><br>
+      <ion-text>Durée de formation: {{item.duree}}</ion-text><br><br>
+     
+      
+      <ion-button
+      (click)="openDetailsWithQueryParams(item)"
+        style="margin-left: 110px;">Détail</ion-button>
+    </ion-card-content>
+  </ion-item>
+</ion-list>
+</ion-infinite-scroll-content>
+
+</ion-content>

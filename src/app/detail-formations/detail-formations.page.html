@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Détail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text style="font-size: 25px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(3, 54, 9);">{{this.nom}}</ion-text>
+  <ion-card-content style="display: flex; flex: 1; justify-content: center; align-items: center; width: 100%; height: 100%;">
+    <ion-card style="background-color: rgb(102, 226, 127); width: 90%; height: 90%;">
+      <ion-infinite-scroll-content>
+        <ion-text style="color: white;">{{this.description}}</ion-text>
+        <ion-text>Durée de formation :{{this.duree}}</ion-text>
+        <ion-card style="width: 100px;  background-color: blue; border-radius: 5px; height: 10px; display: flex; flex: 1; justify-content: center; align-items: cente; margin-left: 50%;">
+          <ion-text (click)="InscrirUtilisateur(this.email, this.nom)" style="text-align: center; color: rgb(255, 255, 255); ">Inscription</ion-text>
+        </ion-card>
+      </ion-infinite-scroll-content>
+    </ion-card>
+  </ion-card-content>
+</ion-content>
